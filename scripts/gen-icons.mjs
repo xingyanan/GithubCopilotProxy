@@ -90,7 +90,8 @@ function sample(u, v, variant) {
   return bg;
 }
 
-writeFileSync(join(outDir, "icon.png"), png(256, shape("app")));
+// macOS 要求应用图标至少 512x512，这里直接生成 1024x1024
+writeFileSync(join(outDir, "icon.png"), png(1024, shape("app")));
 writeFileSync(join(outDir, "tray.png"), png(16, shape("tray")));
 writeFileSync(join(outDir, "tray@2x.png"), png(32, shape("tray")));
 // 代理停止时的灰色托盘图标：背景变灰、护目镜保持深色
