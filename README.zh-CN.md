@@ -79,7 +79,7 @@ curl http://127.0.0.1:4141/v1/images/generations \
 写入的内容：
 
 - **Claude Code**：`~/.claude/settings.json` 的 `env` 字段（`ANTHROPIC_BASE_URL`、`ANTHROPIC_AUTH_TOKEN`、`ANTHROPIC_MODEL` 以及 sonnet / opus / haiku 别名）。支持 `CLAUDE_CONFIG_DIR`。
-- **Codex**：`~/.codex/config.toml` 中的 `model`、`model_provider` 和 `[model_providers.copilot-proxy]`（`wire_api = "responses"`）。支持 `CODEX_HOME`。
+- **Codex**：在 `~/.codex/config.toml` 中配置模型、代理和 `model_catalog_json`。桌面端重启后，新会话的模型列表会显示在代理中选定的模型。支持 `CODEX_HOME`。
 
 首次写入时原文件会复制为 `*.copilot-proxy.bak`。之后修改端口或访问密钥，已配置的工具会自动同步。
 

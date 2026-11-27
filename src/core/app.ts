@@ -374,6 +374,8 @@ export class AppCore extends EventEmitter {
         baseUrl: this.baseUrl() + "/v1",
         apiKey: s.apiKey || undefined,
         model,
+        modelName: info?.name,
+        supportsVision: info?.supports.vision,
         reasoningEffort: s.codex.reasoningEffort || undefined,
         contextWindow: info?.contextWindow,
         maxOutputTokens: info?.maxOutputTokens,
